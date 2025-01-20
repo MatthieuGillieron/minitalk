@@ -6,18 +6,18 @@
 /*   By: mg <mg@student.42.fr>                      +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/01/12 12:35:25 by mg                #+#    #+#             */
-/*   Updated: 2025/01/20 08:57:44 by mg               ###   ########.fr       */
+/*   Updated: 2025/01/20 09:52:39 by mg               ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "minitalk.h"
 
-static int is_complete = 0;
+static int	g_complete = 0;
 
-static	void ft_handle_signal(int signal)
+static void	ft_handle_signal(int signal)
 {
 	static int	bit = 0;
-	static char c = 0;
+	static char	c = 0;
 
 	if (signal == SIGUSR1)
 		c |= (0x80 >> bit);
@@ -27,15 +27,14 @@ static	void ft_handle_signal(int signal)
 	if (bit == 8)
 	{
 		if (c == '\0')
-			is_complete = 1;
+			g_complete = 1;
 		write(1, &c, 1);
 		c = 0;
 		bit = 0;
-
 	}
 }
 
-int main(int ac, char **av)
+int	main(int ac, char **av)
 {
 	(void)av;
 	if (ac != 1)
@@ -49,10 +48,10 @@ int main(int ac, char **av)
 	while (1)
 	{
 		pause();
-		if (is_complete == 1)
+		if (g_complete == 1)
 		{
-			ft_printf("Received, waiting for the next\n");
-			is_complete = 0;
+			ft_printf("\nReceived, waiting for the next\n");
+			g_complete = 0;
 		}
 	}
 	return (0);

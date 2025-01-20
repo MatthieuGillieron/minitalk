@@ -6,13 +6,13 @@
 /*   By: mg <mg@student.42.fr>                      +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/01/12 12:35:36 by mg                #+#    #+#             */
-/*   Updated: 2025/01/20 08:48:13 by mg               ###   ########.fr       */
+/*   Updated: 2025/01/20 09:54:00 by mg               ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "minitalk.h"
 
-static void ft_transmission(int srv_pid, char c)
+static void	ft_transmission(int srv_pid, char c)
 {
 	int	bit;
 
@@ -28,10 +28,10 @@ static void ft_transmission(int srv_pid, char c)
 	}
 }
 
-static int ft_atoi_pid(const char *str)
+static int	ft_atoi_pid(const char *str)
 {
-	int i;
-	int result;
+	int	i;
+	int	result;
 
 	i = 0;
 	result = 0;
@@ -47,9 +47,9 @@ static int ft_atoi_pid(const char *str)
 	return (result);
 }
 
-int main(int ac, char **av)
+int	main(int ac, char **av)
 {
-	pid_t 	srv_pid;
+	pid_t	srv_pid;
 	char	*message;
 	int		i;
 
