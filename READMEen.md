@@ -44,4 +44,4 @@ make
 
 ### 4. Send a message with the client :
 ```bash
-./client <PID_du_serveur> "Votre message ici"  
+./client <PID_serverr> "your message"  
