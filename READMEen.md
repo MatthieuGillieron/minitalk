@@ -30,4 +30,18 @@ Here are the features implemented in this project:
 ```bash  
 git clone https://github.com/MatthieuGillieron/minitalk.git  
 cd minitalk
+```
 
+### 2. Compile the files :
+```bash
+make
+```
+
+### 3.Start the server :
+```bash
+./server  
+```
+
+### 4. Send a message with the client :
+```bash
+./client <PID_du_serveur> "Votre message ici"  
