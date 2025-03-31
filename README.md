@@ -1,5 +1,7 @@
 # Minitalk  - Projet 42
 
+[![English](https://img.shields.io/badge/English-blue.svg)](./READMEen.md)   [![Français](https://img.shields.io/badge/Français-gray.svg)](./README.md)  
+
 Le projet **Minitalk** consiste à créer un système de communication simple entre un client et un serveur en utilisant les signaux Unix. Le serveur reçoit des messages du client et les affiche. Ce projet met en pratique des concepts liés à la programmation système, à la gestion des processus, et aux signaux Unix.  
 
 
